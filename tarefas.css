@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background: #EEE;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+h1 {
+    text-align: center;
+    color: seagreen;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 a {
+    all: unset;
+    cursor: pointer;
+}
+
+.erro {
+    color: #F44;
+}
+
+fieldset {
+    border: 1px solid #555;
+    color: #333;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 0 0 0;
+}
+
+label {
+    display: block;
+    margin: 10px 0 0 0;
+}
+
+input[type=text], textarea {
+    font-size: 1em;
+    width: 100%;
+    border: 1px solid #555;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type=radio], input[type=checkbox] {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type=submit] {
+    margin: 10px 0 0 0;
+    font-size: 1em;
+    float: right;
+    clear: both;
+    border: 1px solid #555;
+    padding: 7px;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #333;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th {
+    background-color: #EEE;
+    font-size: 1em;
+    padding: 0.75em;
+    border: 1px solid #DDDDDD;
+}
+
+table td{
+    border: 1px solid #333;
+    padding: 0.05em 0.25em;
+    color: #000;
+}
+
+.centro {
+    text-align: center;
+}
+
+tr:nth-child(odd) {
+    background-color: #eee;
+}
+
+tr:nth-child(even) {
+    background-color: #fff;
+}
