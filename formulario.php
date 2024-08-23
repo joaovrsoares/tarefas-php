@@ -9,6 +9,9 @@
             <textarea name="descricao" style="resize: vertical;" value="<?= $tarefa['descricao']; ?>"></textarea>
         </label>
         <label>Prazo (opcional):
+            <?php if ($tem_erros && isset($erros_validacao['prazo'])) : ?>
+                <span class="erro"><?php echo $erros_validacao['prazo']; ?></span>
+            <?php endif; ?>
             <input type="text" name="prazo" pattern="\d{2}/\d{2}/\d{4}" title="DD/MM/AAAA" placeholder="DD/MM/AAAA" value="<?= converte_data_para_tela($tarefa['prazo']); ?>">
         </label>
         <fieldset style="padding-top: 12px; padding-bottom: 16px">
