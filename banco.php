@@ -1,11 +1,12 @@
 <?php
-$dbServidor = 'localhost';
-$dbUsuario = 'root';
-$dbSenha = '1302';
-$dbBanco = 'atividades';
 
-$conexao = mysqli_connect($dbServidor, $dbUsuario, $dbSenha, $dbBanco);
-// Conecta ao banco de dados usando as variáveis definidas acima
+// Conecta ao banco de dados usando as variáveis definidas no config.php
+$conexao = mysqli_connect(BD_SERVIDOR, BD_USUARIO, BD_SENHA, BD_BANCO);
+
+if (mysqli_connect_errno($conexao)) {
+    echo "Problemas para conectar no banco. Verifique os dados!";
+    die();
+}
 
 function gravar_anexo($conexao, $anexo) {
     $sqlGravar = "
@@ -26,8 +27,7 @@ function buscar_anexo() {
     $sqlBusca = "SELECT * FROM anexos WHERE tarefa_id = {$tarefa_id}";
     $resultado = mysqli_query($conexao, $sqlBusca);
 
-    $anexos = array();
-    
+    $anexos = array();  
 }
 
 function buscar_tarefas($conexao) {
