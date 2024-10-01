@@ -1,12 +1,9 @@
 <?php
 
 // Conexão ao banco de dados (MySQL)
-define("BD_SERVIDOR", "localhost");
-define("BD_USUARIO", "root");
-define("BD_SENHA", "0000");
-define("BD_BANCO", "0000");
+if (!defined("BD_USUARIO")) define("BD_USUARIO", "root");
+if (!defined("BD_SENHA")) define("BD_SENHA", "");
+if (!defined("BD_DSN")) define("BD_DSN", "mysql:dbname=atividades;host=localhost");
 
 // E-mail para notificação
-define("EMAIL_NOTIFICACAO", "meuemail@gmail.com")
-
-?>
+if (!defined("EMAIL_NOTIFICACAO")) define("EMAIL_NOTIFICACAO", "meuemail@gmail.com");
